@@ -1,0 +1,616 @@
+05/27/2024 12:10:25 - INFO - transformers.tokenization_utils_base - loading file tokenizer.model from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/tokenizer.model
+
+05/27/2024 12:10:25 - INFO - transformers.tokenization_utils_base - loading file tokenizer.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/tokenizer.json
+
+05/27/2024 12:10:25 - INFO - transformers.tokenization_utils_base - loading file added_tokens.json from cache at None
+
+05/27/2024 12:10:25 - INFO - transformers.tokenization_utils_base - loading file special_tokens_map.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/special_tokens_map.json
+
+05/27/2024 12:10:25 - INFO - transformers.tokenization_utils_base - loading file tokenizer_config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/tokenizer_config.json
+
+05/27/2024 12:10:26 - INFO - llamafactory.data.template - Add pad token: </s>
+
+05/27/2024 12:10:26 - INFO - llamafactory.data.loader - Loading dataset aman3456/conscious-ai...
+
+05/27/2024 12:10:30 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 12:10:30 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "_name_or_path": "mistralai/Mistral-7B-Instruct-v0.2",
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 12:10:30 - INFO - llamafactory.model.utils.quantization - Quantizing model to 4 bit.
+
+05/27/2024 12:10:31 - INFO - transformers.modeling_utils - loading weights file model.safetensors from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/model.safetensors.index.json
+
+05/27/2024 12:13:23 - INFO - transformers.modeling_utils - Instantiating MistralForCausalLM model under default dtype torch.float16.
+
+05/27/2024 12:13:23 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 2
+}
+
+
+05/27/2024 12:13:42 - INFO - transformers.modeling_utils - All model checkpoint weights were used when initializing MistralForCausalLM.
+
+
+05/27/2024 12:13:42 - INFO - transformers.modeling_utils - All the weights of MistralForCausalLM were initialized from the model checkpoint at mistralai/Mistral-7B-Instruct-v0.2.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use MistralForCausalLM for predictions without further training.
+
+05/27/2024 12:13:42 - INFO - transformers.generation.configuration_utils - loading configuration file generation_config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/generation_config.json
+
+05/27/2024 12:13:42 - INFO - transformers.generation.configuration_utils - Generate config GenerationConfig {
+  "bos_token_id": 1,
+  "eos_token_id": 2
+}
+
+
+05/27/2024 12:13:43 - INFO - llamafactory.model.utils.checkpointing - Gradient checkpointing enabled.
+
+05/27/2024 12:13:43 - INFO - llamafactory.model.utils.attention - Using vanilla attention implementation.
+
+05/27/2024 12:13:43 - INFO - llamafactory.model.adapter - Upcasting trainable params to float32.
+
+05/27/2024 12:13:43 - INFO - llamafactory.model.adapter - Fine-tuning method: LoRA
+
+05/27/2024 12:13:43 - INFO - llamafactory.model.loader - trainable params: 3407872 || all params: 7245139968 || trainable%: 0.0470
+
+05/27/2024 12:13:43 - INFO - transformers.trainer - Using auto half precision backend
+
+05/27/2024 12:13:43 - INFO - transformers.trainer - ***** Running training *****
+
+05/27/2024 12:13:43 - INFO - transformers.trainer -   Num examples = 8,389
+
+05/27/2024 12:13:43 - INFO - transformers.trainer -   Num Epochs = 5
+
+05/27/2024 12:13:43 - INFO - transformers.trainer -   Instantaneous batch size per device = 16
+
+05/27/2024 12:13:43 - INFO - transformers.trainer -   Total train batch size (w. parallel, distributed & accumulation) = 64
+
+05/27/2024 12:13:43 - INFO - transformers.trainer -   Gradient Accumulation steps = 4
+
+05/27/2024 12:13:43 - INFO - transformers.trainer -   Total optimization steps = 655
+
+05/27/2024 12:13:43 - INFO - transformers.trainer -   Number of trainable parameters = 3,407,872
+
+05/27/2024 12:14:18 - INFO - llamafactory.extras.callbacks - {'loss': 4.7161, 'learning_rate': 4.9993e-05, 'epoch': 0.04}
+
+05/27/2024 12:14:51 - INFO - llamafactory.extras.callbacks - {'loss': 4.1929, 'learning_rate': 4.9971e-05, 'epoch': 0.08}
+
+05/27/2024 12:15:24 - INFO - llamafactory.extras.callbacks - {'loss': 3.4368, 'learning_rate': 4.9935e-05, 'epoch': 0.11}
+
+05/27/2024 12:16:04 - INFO - llamafactory.extras.callbacks - {'loss': 2.5670, 'learning_rate': 4.9885e-05, 'epoch': 0.15}
+
+05/27/2024 12:16:33 - INFO - llamafactory.extras.callbacks - {'loss': 2.0952, 'learning_rate': 4.9820e-05, 'epoch': 0.19}
+
+05/27/2024 12:17:07 - INFO - llamafactory.extras.callbacks - {'loss': 1.8250, 'learning_rate': 4.9742e-05, 'epoch': 0.23}
+
+05/27/2024 12:17:41 - INFO - llamafactory.extras.callbacks - {'loss': 1.6839, 'learning_rate': 4.9649e-05, 'epoch': 0.27}
+
+05/27/2024 12:18:14 - INFO - llamafactory.extras.callbacks - {'loss': 1.6191, 'learning_rate': 4.9541e-05, 'epoch': 0.30}
+
+05/27/2024 12:18:51 - INFO - llamafactory.extras.callbacks - {'loss': 1.4999, 'learning_rate': 4.9420e-05, 'epoch': 0.34}
+
+05/27/2024 12:19:26 - INFO - llamafactory.extras.callbacks - {'loss': 1.4880, 'learning_rate': 4.9285e-05, 'epoch': 0.38}
+
+05/27/2024 12:20:03 - INFO - llamafactory.extras.callbacks - {'loss': 1.4490, 'learning_rate': 4.9135e-05, 'epoch': 0.42}
+
+05/27/2024 12:20:35 - INFO - llamafactory.extras.callbacks - {'loss': 1.4369, 'learning_rate': 4.8972e-05, 'epoch': 0.46}
+
+05/27/2024 12:21:10 - INFO - llamafactory.extras.callbacks - {'loss': 1.3994, 'learning_rate': 4.8795e-05, 'epoch': 0.50}
+
+05/27/2024 12:21:45 - INFO - llamafactory.extras.callbacks - {'loss': 1.4229, 'learning_rate': 4.8604e-05, 'epoch': 0.53}
+
+05/27/2024 12:22:21 - INFO - llamafactory.extras.callbacks - {'loss': 1.3680, 'learning_rate': 4.8400e-05, 'epoch': 0.57}
+
+05/27/2024 12:22:54 - INFO - llamafactory.extras.callbacks - {'loss': 1.4061, 'learning_rate': 4.8182e-05, 'epoch': 0.61}
+
+05/27/2024 12:23:26 - INFO - llamafactory.extras.callbacks - {'loss': 1.3476, 'learning_rate': 4.7951e-05, 'epoch': 0.65}
+
+05/27/2024 12:24:01 - INFO - llamafactory.extras.callbacks - {'loss': 1.4022, 'learning_rate': 4.7707e-05, 'epoch': 0.69}
+
+05/27/2024 12:24:41 - INFO - llamafactory.extras.callbacks - {'loss': 1.4272, 'learning_rate': 4.7449e-05, 'epoch': 0.72}
+
+05/27/2024 12:25:21 - INFO - llamafactory.extras.callbacks - {'loss': 1.3773, 'learning_rate': 4.7179e-05, 'epoch': 0.76}
+
+05/27/2024 12:25:21 - INFO - transformers.trainer - Saving model checkpoint to saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-100
+
+05/27/2024 12:25:21 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 12:25:21 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 12:25:21 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-100/tokenizer_config.json
+
+05/27/2024 12:25:21 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-100/special_tokens_map.json
+
+05/27/2024 12:25:54 - INFO - llamafactory.extras.callbacks - {'loss': 1.3565, 'learning_rate': 4.6896e-05, 'epoch': 0.80}
+
+05/27/2024 12:26:33 - INFO - llamafactory.extras.callbacks - {'loss': 1.4167, 'learning_rate': 4.6601e-05, 'epoch': 0.84}
+
+05/27/2024 12:27:05 - INFO - llamafactory.extras.callbacks - {'loss': 1.3369, 'learning_rate': 4.6292e-05, 'epoch': 0.88}
+
+05/27/2024 12:27:46 - INFO - llamafactory.extras.callbacks - {'loss': 1.3890, 'learning_rate': 4.5972e-05, 'epoch': 0.91}
+
+05/27/2024 12:28:20 - INFO - llamafactory.extras.callbacks - {'loss': 1.3591, 'learning_rate': 4.5640e-05, 'epoch': 0.95}
+
+05/27/2024 12:28:56 - INFO - llamafactory.extras.callbacks - {'loss': 1.3123, 'learning_rate': 4.5296e-05, 'epoch': 0.99}
+
+05/27/2024 12:29:25 - INFO - llamafactory.extras.callbacks - {'loss': 1.3789, 'learning_rate': 4.4940e-05, 'epoch': 1.03}
+
+05/27/2024 12:30:02 - INFO - llamafactory.extras.callbacks - {'loss': 1.4200, 'learning_rate': 4.4572e-05, 'epoch': 1.07}
+
+05/27/2024 12:30:41 - INFO - llamafactory.extras.callbacks - {'loss': 1.3355, 'learning_rate': 4.4194e-05, 'epoch': 1.10}
+
+05/27/2024 12:31:16 - INFO - llamafactory.extras.callbacks - {'loss': 1.3584, 'learning_rate': 4.3804e-05, 'epoch': 1.14}
+
+05/27/2024 12:31:51 - INFO - llamafactory.extras.callbacks - {'loss': 1.3237, 'learning_rate': 4.3404e-05, 'epoch': 1.18}
+
+05/27/2024 12:32:24 - INFO - llamafactory.extras.callbacks - {'loss': 1.2919, 'learning_rate': 4.2993e-05, 'epoch': 1.22}
+
+05/27/2024 12:32:57 - INFO - llamafactory.extras.callbacks - {'loss': 1.3017, 'learning_rate': 4.2571e-05, 'epoch': 1.26}
+
+05/27/2024 12:33:31 - INFO - llamafactory.extras.callbacks - {'loss': 1.3116, 'learning_rate': 4.2140e-05, 'epoch': 1.30}
+
+05/27/2024 12:34:05 - INFO - llamafactory.extras.callbacks - {'loss': 1.2453, 'learning_rate': 4.1699e-05, 'epoch': 1.33}
+
+05/27/2024 12:34:43 - INFO - llamafactory.extras.callbacks - {'loss': 1.3084, 'learning_rate': 4.1248e-05, 'epoch': 1.37}
+
+05/27/2024 12:35:18 - INFO - llamafactory.extras.callbacks - {'loss': 1.3098, 'learning_rate': 4.0787e-05, 'epoch': 1.41}
+
+05/27/2024 12:35:50 - INFO - llamafactory.extras.callbacks - {'loss': 1.2579, 'learning_rate': 4.0318e-05, 'epoch': 1.45}
+
+05/27/2024 12:36:31 - INFO - llamafactory.extras.callbacks - {'loss': 1.3433, 'learning_rate': 3.9840e-05, 'epoch': 1.49}
+
+05/27/2024 12:37:02 - INFO - llamafactory.extras.callbacks - {'loss': 1.2508, 'learning_rate': 3.9353e-05, 'epoch': 1.52}
+
+05/27/2024 12:37:02 - INFO - transformers.trainer - Saving model checkpoint to saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-200
+
+05/27/2024 12:37:02 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 12:37:02 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 12:37:02 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-200/tokenizer_config.json
+
+05/27/2024 12:37:02 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-200/special_tokens_map.json
+
+05/27/2024 12:37:38 - INFO - llamafactory.extras.callbacks - {'loss': 1.2134, 'learning_rate': 3.8858e-05, 'epoch': 1.56}
+
+05/27/2024 12:38:14 - INFO - llamafactory.extras.callbacks - {'loss': 1.2832, 'learning_rate': 3.8355e-05, 'epoch': 1.60}
+
+05/27/2024 12:38:52 - INFO - llamafactory.extras.callbacks - {'loss': 1.3367, 'learning_rate': 3.7845e-05, 'epoch': 1.64}
+
+05/27/2024 12:39:24 - INFO - llamafactory.extras.callbacks - {'loss': 1.2754, 'learning_rate': 3.7327e-05, 'epoch': 1.68}
+
+05/27/2024 12:39:55 - INFO - llamafactory.extras.callbacks - {'loss': 1.2333, 'learning_rate': 3.6801e-05, 'epoch': 1.71}
+
+05/27/2024 12:40:31 - INFO - llamafactory.extras.callbacks - {'loss': 1.2774, 'learning_rate': 3.6270e-05, 'epoch': 1.75}
+
+05/27/2024 12:41:03 - INFO - llamafactory.extras.callbacks - {'loss': 1.2047, 'learning_rate': 3.5731e-05, 'epoch': 1.79}
+
+05/27/2024 12:41:39 - INFO - llamafactory.extras.callbacks - {'loss': 1.2822, 'learning_rate': 3.5187e-05, 'epoch': 1.83}
+
+05/27/2024 12:42:12 - INFO - llamafactory.extras.callbacks - {'loss': 1.2697, 'learning_rate': 3.4636e-05, 'epoch': 1.87}
+
+05/27/2024 12:42:47 - INFO - llamafactory.extras.callbacks - {'loss': 1.2566, 'learning_rate': 3.4080e-05, 'epoch': 1.90}
+
+05/27/2024 12:43:27 - INFO - llamafactory.extras.callbacks - {'loss': 1.2494, 'learning_rate': 3.3519e-05, 'epoch': 1.94}
+
+05/27/2024 12:44:01 - INFO - llamafactory.extras.callbacks - {'loss': 1.2742, 'learning_rate': 3.2953e-05, 'epoch': 1.98}
+
+05/27/2024 12:44:34 - INFO - llamafactory.extras.callbacks - {'loss': 1.1955, 'learning_rate': 3.2383e-05, 'epoch': 2.02}
+
+05/27/2024 12:45:16 - INFO - llamafactory.extras.callbacks - {'loss': 1.2359, 'learning_rate': 3.1808e-05, 'epoch': 2.06}
+
+05/27/2024 12:45:52 - INFO - llamafactory.extras.callbacks - {'loss': 1.2571, 'learning_rate': 3.1229e-05, 'epoch': 2.10}
+
+05/27/2024 12:46:25 - INFO - llamafactory.extras.callbacks - {'loss': 1.2468, 'learning_rate': 3.0646e-05, 'epoch': 2.13}
+
+05/27/2024 12:46:59 - INFO - llamafactory.extras.callbacks - {'loss': 1.2642, 'learning_rate': 3.0061e-05, 'epoch': 2.17}
+
+05/27/2024 12:47:30 - INFO - llamafactory.extras.callbacks - {'loss': 1.2248, 'learning_rate': 2.9472e-05, 'epoch': 2.21}
+
+05/27/2024 12:48:04 - INFO - llamafactory.extras.callbacks - {'loss': 1.1951, 'learning_rate': 2.8881e-05, 'epoch': 2.25}
+
+05/27/2024 12:48:39 - INFO - llamafactory.extras.callbacks - {'loss': 1.2722, 'learning_rate': 2.8288e-05, 'epoch': 2.29}
+
+05/27/2024 12:48:39 - INFO - transformers.trainer - Saving model checkpoint to saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-300
+
+05/27/2024 12:48:39 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 12:48:39 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 12:48:39 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-300/tokenizer_config.json
+
+05/27/2024 12:48:39 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-300/special_tokens_map.json
+
+05/27/2024 12:49:11 - INFO - llamafactory.extras.callbacks - {'loss': 1.1981, 'learning_rate': 2.7693e-05, 'epoch': 2.32}
+
+05/27/2024 12:49:42 - INFO - llamafactory.extras.callbacks - {'loss': 1.1646, 'learning_rate': 2.7096e-05, 'epoch': 2.36}
+
+05/27/2024 12:50:14 - INFO - llamafactory.extras.callbacks - {'loss': 1.1881, 'learning_rate': 2.6498e-05, 'epoch': 2.40}
+
+05/27/2024 12:50:50 - INFO - llamafactory.extras.callbacks - {'loss': 1.2155, 'learning_rate': 2.5899e-05, 'epoch': 2.44}
+
+05/27/2024 12:51:23 - INFO - llamafactory.extras.callbacks - {'loss': 1.2307, 'learning_rate': 2.5300e-05, 'epoch': 2.48}
+
+05/27/2024 12:51:54 - INFO - llamafactory.extras.callbacks - {'loss': 1.1606, 'learning_rate': 2.4700e-05, 'epoch': 2.51}
+
+05/27/2024 12:52:26 - INFO - llamafactory.extras.callbacks - {'loss': 1.2489, 'learning_rate': 2.4101e-05, 'epoch': 2.55}
+
+05/27/2024 12:52:58 - INFO - llamafactory.extras.callbacks - {'loss': 1.2028, 'learning_rate': 2.3502e-05, 'epoch': 2.59}
+
+05/27/2024 12:53:38 - INFO - llamafactory.extras.callbacks - {'loss': 1.2568, 'learning_rate': 2.2904e-05, 'epoch': 2.63}
+
+05/27/2024 12:54:12 - INFO - llamafactory.extras.callbacks - {'loss': 1.1971, 'learning_rate': 2.2307e-05, 'epoch': 2.67}
+
+05/27/2024 12:54:49 - INFO - llamafactory.extras.callbacks - {'loss': 1.2410, 'learning_rate': 2.1712e-05, 'epoch': 2.70}
+
+05/27/2024 12:55:21 - INFO - llamafactory.extras.callbacks - {'loss': 1.2004, 'learning_rate': 2.1119e-05, 'epoch': 2.74}
+
+05/27/2024 12:55:58 - INFO - llamafactory.extras.callbacks - {'loss': 1.1715, 'learning_rate': 2.0528e-05, 'epoch': 2.78}
+
+05/27/2024 12:56:33 - INFO - llamafactory.extras.callbacks - {'loss': 1.2705, 'learning_rate': 1.9939e-05, 'epoch': 2.82}
+
+05/27/2024 12:57:08 - INFO - llamafactory.extras.callbacks - {'loss': 1.1579, 'learning_rate': 1.9354e-05, 'epoch': 2.86}
+
+05/27/2024 12:57:44 - INFO - llamafactory.extras.callbacks - {'loss': 1.2216, 'learning_rate': 1.8771e-05, 'epoch': 2.90}
+
+05/27/2024 12:58:22 - INFO - llamafactory.extras.callbacks - {'loss': 1.2041, 'learning_rate': 1.8192e-05, 'epoch': 2.93}
+
+05/27/2024 12:58:59 - INFO - llamafactory.extras.callbacks - {'loss': 1.1970, 'learning_rate': 1.7617e-05, 'epoch': 2.97}
+
+05/27/2024 12:59:33 - INFO - llamafactory.extras.callbacks - {'loss': 1.2030, 'learning_rate': 1.7047e-05, 'epoch': 3.01}
+
+05/27/2024 13:00:05 - INFO - llamafactory.extras.callbacks - {'loss': 1.2277, 'learning_rate': 1.6481e-05, 'epoch': 3.05}
+
+05/27/2024 13:00:05 - INFO - transformers.trainer - Saving model checkpoint to saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-400
+
+05/27/2024 13:00:06 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 13:00:06 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 13:00:06 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-400/tokenizer_config.json
+
+05/27/2024 13:00:06 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-400/special_tokens_map.json
+
+05/27/2024 13:00:41 - INFO - llamafactory.extras.callbacks - {'loss': 1.1842, 'learning_rate': 1.5920e-05, 'epoch': 3.09}
+
+05/27/2024 13:01:13 - INFO - llamafactory.extras.callbacks - {'loss': 1.1202, 'learning_rate': 1.5364e-05, 'epoch': 3.12}
+
+05/27/2024 13:01:49 - INFO - llamafactory.extras.callbacks - {'loss': 1.2570, 'learning_rate': 1.4813e-05, 'epoch': 3.16}
+
+05/27/2024 13:02:21 - INFO - llamafactory.extras.callbacks - {'loss': 1.2167, 'learning_rate': 1.4269e-05, 'epoch': 3.20}
+
+05/27/2024 13:02:54 - INFO - llamafactory.extras.callbacks - {'loss': 1.1407, 'learning_rate': 1.3730e-05, 'epoch': 3.24}
+
+05/27/2024 13:03:30 - INFO - llamafactory.extras.callbacks - {'loss': 1.2349, 'learning_rate': 1.3199e-05, 'epoch': 3.28}
+
+05/27/2024 13:04:02 - INFO - llamafactory.extras.callbacks - {'loss': 1.1560, 'learning_rate': 1.2673e-05, 'epoch': 3.31}
+
+05/27/2024 13:04:39 - INFO - llamafactory.extras.callbacks - {'loss': 1.1848, 'learning_rate': 1.2155e-05, 'epoch': 3.35}
+
+05/27/2024 13:05:16 - INFO - llamafactory.extras.callbacks - {'loss': 1.1828, 'learning_rate': 1.1645e-05, 'epoch': 3.39}
+
+05/27/2024 13:05:51 - INFO - llamafactory.extras.callbacks - {'loss': 1.1415, 'learning_rate': 1.1142e-05, 'epoch': 3.43}
+
+05/27/2024 13:06:27 - INFO - llamafactory.extras.callbacks - {'loss': 1.2161, 'learning_rate': 1.0647e-05, 'epoch': 3.47}
+
+05/27/2024 13:07:05 - INFO - llamafactory.extras.callbacks - {'loss': 1.1855, 'learning_rate': 1.0160e-05, 'epoch': 3.50}
+
+05/27/2024 13:07:39 - INFO - llamafactory.extras.callbacks - {'loss': 1.1770, 'learning_rate': 9.6821e-06, 'epoch': 3.54}
+
+05/27/2024 13:08:11 - INFO - llamafactory.extras.callbacks - {'loss': 1.1482, 'learning_rate': 9.2127e-06, 'epoch': 3.58}
+
+05/27/2024 13:08:47 - INFO - llamafactory.extras.callbacks - {'loss': 1.2009, 'learning_rate': 8.7524e-06, 'epoch': 3.62}
+
+05/27/2024 13:09:26 - INFO - llamafactory.extras.callbacks - {'loss': 1.1810, 'learning_rate': 8.3015e-06, 'epoch': 3.66}
+
+05/27/2024 13:09:58 - INFO - llamafactory.extras.callbacks - {'loss': 1.1409, 'learning_rate': 7.8601e-06, 'epoch': 3.70}
+
+05/27/2024 13:10:30 - INFO - llamafactory.extras.callbacks - {'loss': 1.1747, 'learning_rate': 7.4286e-06, 'epoch': 3.73}
+
+05/27/2024 13:11:07 - INFO - llamafactory.extras.callbacks - {'loss': 1.1488, 'learning_rate': 7.0073e-06, 'epoch': 3.77}
+
+05/27/2024 13:11:42 - INFO - llamafactory.extras.callbacks - {'loss': 1.1659, 'learning_rate': 6.5962e-06, 'epoch': 3.81}
+
+05/27/2024 13:11:42 - INFO - transformers.trainer - Saving model checkpoint to saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-500
+
+05/27/2024 13:11:42 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 13:11:42 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 13:11:42 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-500/tokenizer_config.json
+
+05/27/2024 13:11:42 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-500/special_tokens_map.json
+
+05/27/2024 13:12:19 - INFO - llamafactory.extras.callbacks - {'loss': 1.1842, 'learning_rate': 6.1958e-06, 'epoch': 3.85}
+
+05/27/2024 13:13:03 - INFO - llamafactory.extras.callbacks - {'loss': 1.2040, 'learning_rate': 5.8061e-06, 'epoch': 3.89}
+
+05/27/2024 13:13:34 - INFO - llamafactory.extras.callbacks - {'loss': 1.1029, 'learning_rate': 5.4275e-06, 'epoch': 3.92}
+
+05/27/2024 13:14:11 - INFO - llamafactory.extras.callbacks - {'loss': 1.1682, 'learning_rate': 5.0602e-06, 'epoch': 3.96}
+
+05/27/2024 13:14:45 - INFO - llamafactory.extras.callbacks - {'loss': 1.1986, 'learning_rate': 4.7043e-06, 'epoch': 4.00}
+
+05/27/2024 13:15:19 - INFO - llamafactory.extras.callbacks - {'loss': 1.0842, 'learning_rate': 4.3601e-06, 'epoch': 4.04}
+
+05/27/2024 13:15:52 - INFO - llamafactory.extras.callbacks - {'loss': 1.1509, 'learning_rate': 4.0278e-06, 'epoch': 4.08}
+
+05/27/2024 13:16:27 - INFO - llamafactory.extras.callbacks - {'loss': 1.1903, 'learning_rate': 3.7075e-06, 'epoch': 4.11}
+
+05/27/2024 13:17:03 - INFO - llamafactory.extras.callbacks - {'loss': 1.1594, 'learning_rate': 3.3995e-06, 'epoch': 4.15}
+
+05/27/2024 13:17:39 - INFO - llamafactory.extras.callbacks - {'loss': 1.1435, 'learning_rate': 3.1039e-06, 'epoch': 4.19}
+
+05/27/2024 13:18:11 - INFO - llamafactory.extras.callbacks - {'loss': 1.1549, 'learning_rate': 2.8209e-06, 'epoch': 4.23}
+
+05/27/2024 13:18:43 - INFO - llamafactory.extras.callbacks - {'loss': 1.1466, 'learning_rate': 2.5506e-06, 'epoch': 4.27}
+
+05/27/2024 13:19:20 - INFO - llamafactory.extras.callbacks - {'loss': 1.2029, 'learning_rate': 2.2933e-06, 'epoch': 4.30}
+
+05/27/2024 13:19:54 - INFO - llamafactory.extras.callbacks - {'loss': 1.2168, 'learning_rate': 2.0490e-06, 'epoch': 4.34}
+
+05/27/2024 13:20:29 - INFO - llamafactory.extras.callbacks - {'loss': 1.1514, 'learning_rate': 1.8179e-06, 'epoch': 4.38}
+
+05/27/2024 13:21:06 - INFO - llamafactory.extras.callbacks - {'loss': 1.1830, 'learning_rate': 1.6002e-06, 'epoch': 4.42}
+
+05/27/2024 13:21:40 - INFO - llamafactory.extras.callbacks - {'loss': 1.1425, 'learning_rate': 1.3959e-06, 'epoch': 4.46}
+
+05/27/2024 13:22:17 - INFO - llamafactory.extras.callbacks - {'loss': 1.2036, 'learning_rate': 1.2051e-06, 'epoch': 4.50}
+
+05/27/2024 13:22:53 - INFO - llamafactory.extras.callbacks - {'loss': 1.1524, 'learning_rate': 1.0281e-06, 'epoch': 4.53}
+
+05/27/2024 13:23:29 - INFO - llamafactory.extras.callbacks - {'loss': 1.1021, 'learning_rate': 8.6483e-07, 'epoch': 4.57}
+
+05/27/2024 13:23:29 - INFO - transformers.trainer - Saving model checkpoint to saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-600
+
+05/27/2024 13:23:29 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 13:23:29 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 13:23:29 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-600/tokenizer_config.json
+
+05/27/2024 13:23:29 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/checkpoint-600/special_tokens_map.json
+
+05/27/2024 13:24:04 - INFO - llamafactory.extras.callbacks - {'loss': 1.1843, 'learning_rate': 7.1546e-07, 'epoch': 4.61}
+
+05/27/2024 13:24:41 - INFO - llamafactory.extras.callbacks - {'loss': 1.2026, 'learning_rate': 5.8005e-07, 'epoch': 4.65}
+
+05/27/2024 13:25:16 - INFO - llamafactory.extras.callbacks - {'loss': 1.1152, 'learning_rate': 4.5869e-07, 'epoch': 4.69}
+
+05/27/2024 13:25:47 - INFO - llamafactory.extras.callbacks - {'loss': 1.1400, 'learning_rate': 3.5143e-07, 'epoch': 4.72}
+
+05/27/2024 13:26:23 - INFO - llamafactory.extras.callbacks - {'loss': 1.1712, 'learning_rate': 2.5836e-07, 'epoch': 4.76}
+
+05/27/2024 13:26:53 - INFO - llamafactory.extras.callbacks - {'loss': 1.1394, 'learning_rate': 1.7951e-07, 'epoch': 4.80}
+
+05/27/2024 13:27:28 - INFO - llamafactory.extras.callbacks - {'loss': 1.1625, 'learning_rate': 1.1494e-07, 'epoch': 4.84}
+
+05/27/2024 13:28:08 - INFO - llamafactory.extras.callbacks - {'loss': 1.1624, 'learning_rate': 6.4673e-08, 'epoch': 4.88}
+
+05/27/2024 13:28:41 - INFO - llamafactory.extras.callbacks - {'loss': 1.1444, 'learning_rate': 2.8750e-08, 'epoch': 4.91}
+
+05/27/2024 13:29:13 - INFO - llamafactory.extras.callbacks - {'loss': 1.1687, 'learning_rate': 7.1886e-09, 'epoch': 4.95}
+
+05/27/2024 13:29:52 - INFO - llamafactory.extras.callbacks - {'loss': 1.1926, 'learning_rate': 0.0000e+00, 'epoch': 4.99}
+
+05/27/2024 13:29:52 - INFO - transformers.trainer - 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+
+05/27/2024 13:29:52 - INFO - transformers.trainer - Saving model checkpoint to saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11
+
+05/27/2024 13:29:52 - INFO - transformers.configuration_utils - loading configuration file config.json from cache at /root/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/41b61a33a2483885c981aa79e0df6b32407ed873/config.json
+
+05/27/2024 13:29:52 - INFO - transformers.configuration_utils - Model config MistralConfig {
+  "architectures": [
+    "MistralForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 32768,
+  "model_type": "mistral",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-05,
+  "rope_theta": 1000000.0,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.41.1",
+  "use_cache": true,
+  "vocab_size": 32000
+}
+
+
+05/27/2024 13:29:52 - INFO - transformers.tokenization_utils_base - tokenizer config file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/tokenizer_config.json
+
+05/27/2024 13:29:52 - INFO - transformers.tokenization_utils_base - Special tokens file saved in saves/Mistral-7B-v0.2-Chat/lora/train_2024-05-27-12-04-11/special_tokens_map.json
+
+05/27/2024 13:29:52 - WARNING - llamafactory.extras.ploting - No metric eval_loss to plot.
+
+05/27/2024 13:29:52 - INFO - transformers.modelcard - Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
+

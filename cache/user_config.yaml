@@ -1,0 +1,6 @@
+cache_dir: null
+lang: en
+last_model: Mistral-7B-v0.2-Chat
+path_dict:
+  Mistral-7B-v0.2-Chat: mistralai/Mistral-7B-Instruct-v0.2
+  Mistral-7B-v0.3-Chat: mistralai/Mistral-7B-Instruct-v0.3
